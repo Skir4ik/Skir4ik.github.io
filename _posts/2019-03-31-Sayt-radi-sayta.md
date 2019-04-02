@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Сайт ради сайта...
-category: News 
+category: news 
 description: Я только начал, но всё ещё впереди... 
 ---
 <p>
