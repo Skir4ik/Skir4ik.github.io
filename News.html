@@ -1,0 +1,12 @@
+---
+layout: default
+---
+{% for post in site.categories.news %}
+
+<div class="blog-post">
+            <h2 class="blog-post-title"><a href="{{post.url|prepend: site.baseurl}}">{{post.title}}</a></h2>
+            {{post.description}} <br>
+			<time class="post_date">{{ post.date | date: "%d. %B. %Y" }}</time>
+			<p class="blog-post-meta">{{post.data}}</p>
+			</div>
+{% endfor %}

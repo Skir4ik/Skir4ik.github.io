@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{% include head.html %}
+
+<body>
+
+    <div class="blog-masthead">
+      <div class="container">
+		{% include top-menu.html %}
+      </div>
+    </div>
+
+    <div class="container">
+	
+      {% include header.html %}
+
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+        {{ content }}
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          {% include sidebar.html %}
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    {% include footer.html %}
+
+  
+</body>
+
+</html>
