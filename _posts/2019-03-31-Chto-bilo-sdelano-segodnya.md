@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Что было сделано сегодня
-category: news 
+category: News 
 description: Работы было много, но оно того стоило...
 ---
 <p>
