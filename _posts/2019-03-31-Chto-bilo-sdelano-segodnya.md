@@ -10,4 +10,21 @@ description: Работы было много, но оно того стоило
 3)Вспомнил немножко html <br>
 </p>
 
+```python
+import csv
+authorsEmail = {}
+with open( "calculator.history", "rt" ) as file:
+    reader = csv.reader( file )
+    for row in reader:
+        name = row[0]
+        email = row[1]
+        if name not in authorsEmail:
+            authorsEmail[ name ] = []
+        emailList = authorsEmail[ name ]
+        if email not in emailList:
+            emailList.append( email )
+for name, email in authorsEmail.items():
+    print name, email
+```
+
 
