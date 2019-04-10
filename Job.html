@@ -2,3 +2,19 @@
 layout: default
 ---
 Тут будет информаци о работе...
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">csv</span>
+<span class="n">authorsEmail</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span> <span class="s">"calculator.history"</span><span class="p">,</span> <span class="s">"rt"</span> <span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span> <span class="nb">file</span> <span class="p">)</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">email</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">authorsEmail</span><span class="p">:</span>
+            <span class="n">authorsEmail</span><span class="p">[</span> <span class="n">name</span> <span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">emailList</span> <span class="o">=</span> <span class="n">authorsEmail</span><span class="p">[</span> <span class="n">name</span> <span class="p">]</span>
+        <span class="k">if</span> <span class="n">email</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">emailList</span><span class="p">:</span>
+            <span class="n">emailList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">email</span> <span class="p">)</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">email</span> <span class="ow">in</span> <span class="n">authorsEmail</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">print</span> <span class="n">name</span><span class="p">,</span> <span class="n">email</span>
+</code></pre></div></div>
